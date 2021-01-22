@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script type="text/javascript" src="novamodernizacao.js"></script>
+
+    <link rel="stylesheet" href="C:\Users\987280624\Desktop\workspace_web\front_modernizacao\css\estilo.css">
+
+    <title>.: Cadastro de Modernização :.</title>
+</head>
+
+<body onload="carregaInfo()">
+    <div class="container">
+        <div class="row">
+        <div class="col-10 text-center">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="C:\Users\987280624\Desktop\workspace_web\front_modernizacao\index.html">
+                  <img src="C:\Users\987280624\Desktop\workspace_web\front_modernizacao\imagens\itau_logo.png" alt="" width="50" height="50">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link disable" aria-current="page" href="C:\Users\987280624\Desktop\workspace_web\front_modernizacao\comunidades.html">Comunidades</a>
+                  <!-- <a class="nav-link" href="#">Features</a>
+                  <a class="nav-link" href="#">Pricing</a> -->
+                  <a class="nav-link Active" href="#" tabindex="-1" aria-disabled="false">Novo</a> 
+                </div>
+              </div>
+            </div>
+          </nav>
+          </div>
+          <div class="col-2">
+            <button type="button" class="btn btn-primary" style="margin-top: 20px;"
+                                onclick="logout()">Logout</button>
+          </div>
+
+
+
+        <div class="row">
+            <div class="col-12 text center">
+                <h3>Cadastro de Nova Modernização</h3><br>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class ="col-12">
+                <h4 id="nomeComunidade">**** NOME ******</h4>
+            </div>
+        </div>
+        <br>
+        <!--   Formulario de Cadastro de Nova Modernização----> 
+    
+        <label for="formulario" class="form-label">Cadastro da Modernização</label>
+        <div id="formulario">
+            <div class="mb-3">
+                <label for="txtData" class="form-label">Data da Modernização</label>
+                <input type="date" class="form-control" id="txtData">
+                <!-- <br><button type="button" class="btn btn-primary" onclick="pesquisar()">Pesquisar</button> -->
+            </div>
+
+            <div class ="row">
+                <div class="col-12" id="restricoes">
+                </div>
+            </div>
+            <br>
+            <div class="mb-3">
+                <label for="txtDescricao" class="form-label">Descrição</label>
+                <input type="text" class="form-control" id="txtDescricao" onfocus="pesquisar()">
+            </div>
+
+            <div class="mb-3">
+                <label for="txtPercentual" class="form-label">Percentual de Conclusão</label>
+                <input type="number" min="0" max="100" class="form-control" id="txtPercentual">
+            </div>
+
+            <div class="row">
+                <div clas="col-12">
+                    <p id="msgStatus" style="color:red;">...</p>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="cadastrar()">Cadastrar</button>
+
+        </div>
+        <!-- fim do formulario -->
+
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
